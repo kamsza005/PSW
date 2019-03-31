@@ -63,9 +63,9 @@ public class cwiczenie1 {
         	
         	wynik=wynik+((tablica2[i]-(srednia/liczba))*(tablica2[i]-(srednia/liczba)));
         }
-        
-		System.out.println("Odchylenie standardowe wynosi: "+wynik/(srednia/liczba));
 
+		
+		System.out.println("Odchylenie standardowe wynosi: "+Math.sqrt(wynik/liczba));
         
 
 	}

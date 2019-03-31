@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class cwiczenie2 {
 
 	public static void main(String[] args) {
+		
 		Scanner in = new Scanner(System.in);
         Random r = new Random();
  
@@ -27,9 +28,9 @@ public class cwiczenie2 {
         }
         
         
-        //Wyswietlenie
         
-        System.out.println("Macierz nr.1");
+        
+       
         for(int i=0; i<tab2.length; i++){ // "Przejœcie" przez wiersze
             for(int j=0; j<tab2[i].length; j++) {// "Przejœcie" przez kolumny
             	Random rand = new Random();
@@ -38,6 +39,8 @@ public class cwiczenie2 {
             }
         }
         
+        
+        System.out.println("Macierz nr.1");
         for(int i=0; i<tab2.length; i++){ // "Przejœcie" przez wiersze
             for(int j=0; j<tab2[i].length; j++)
             	System.out.print(tab2[i][j]+" ");
@@ -90,7 +93,28 @@ public class cwiczenie2 {
         }
         
         
+        int [][] tab5 = new int[wielkosc][wielkosc]; 
         
+            int wynik = 0;
+          
+            for (int rzad = 0; rzad < wielkosc; rzad++) {
+                for (int kolumna = 0; kolumna < wielkosc; kolumna++) {
+                    for (int tmpColumn = 0; tmpColumn < wielkosc; tmpColumn++) {
+                        wynik=wynik+ (tab[rzad][tmpColumn]*tab2[tmpColumn][kolumna]);
+                    }
+                    tab5[rzad][kolumna] = wynik;
+                    wynik = 0;
+                }
+            }
+
+            System.out.println("Macierz nr.5 po mnozeniu dwoch macierzy");
+            
+
+            for(int i=0; i<tab5.length; i++){ // "Przejœcie" przez wiersze
+                for(int j=0; j<tab5[i].length; j++)
+                	System.out.print(tab5[i][j]+" ");
+                 	System.out.println(); 
+            }
        
         
 
